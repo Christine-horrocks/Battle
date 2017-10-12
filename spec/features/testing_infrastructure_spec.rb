@@ -30,3 +30,13 @@ end
       expect(page).to have_content "Bob, you have attacked Brian (That is quite mean really)"
     end
   end
+
+  feature 'Decduct points'do
+      scenario 'Player two loses 10 points' do
+        sign_in_and_play
+        click_button "Attack!"
+        click_link "Ok!"
+        expect(page).to have_content "Player 2 is: Brian, they have 10 points"
+        # expect(page).not_to_have_content "Brian has 20 points"
+      end
+  end
