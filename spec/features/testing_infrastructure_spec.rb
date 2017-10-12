@@ -22,3 +22,11 @@ end
       expect(page).to have_content "Player 1 is: Bob, they have 20 points"
     end
   end
+
+  feature 'Attack!' do
+    scenario 'Player 1 attackes player 2' do
+      sign_in_and_play
+      click_button "Attack!"
+      expect(page).to have_content "Bob, you have attacked Brian (That is quite mean really)"
+    end
+  end
