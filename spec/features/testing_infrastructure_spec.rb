@@ -19,7 +19,7 @@ end
   feature 'Viewing Hit Points' do
     scenario 'Each player can see the others points' do
       sign_in_and_play
-      expect(page).to have_content "Player 1 is: Bob, they have 20 points"
+      expect(page).to have_content "Player 1 is: Bob, they have 60 points"
     end
   end
 
@@ -36,7 +36,7 @@ end
         sign_in_and_play
         click_button "Attack!"
         click_link "Ok!"
-        expect(page).to have_content "Player 2 is: Brian, they have 10 points"
+        expect(page).to have_content "Player 2 is: Brian, they have 50 points"
         # expect(page).not_to_have_content "Brian has 20 points"
       end
   end
