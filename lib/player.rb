@@ -8,10 +8,6 @@ class Player
     @life = life
   end
 
-  # def attack(player)
-  #   player.lose_points
-  # end
-
   def lose_points
     @life -= 10
   end
